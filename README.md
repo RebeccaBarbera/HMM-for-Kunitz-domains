@@ -1,4 +1,19 @@
 # HMM-for-Kunitz-domains
+## Prject Description
+This project builds a Hidden Markov Model (HMM) to identify Kunitz-type protease inhibitor domains (Pfam: PF00014) in protein sequences. It integrates structural data from the Protein Data Bank (PDB) and curated sequences from UniProt to develop, train, and evaluate the model.
+
+##### Key Features:
+- Automated retrieval of Kunitz domain sequences from PDB and UniProt.
+- Sequence clustering, cleaning, and alignment to construct a high-quality multiple sequence alignment (MSA).
+- HMM profile generation using HMMER.
+- Removal of high-similarity sequences to ensure dataset diversity.
+- Construction of positive and negative datasets for performance evaluation.
+- Scalable performance evaluation across multiple E-value thresholds.
+
+
+###### This pipeline is useful for researchers aiming to detect Kunitz domains in novel sequences, benchmark domain prediction algorithms, or explore evolutionary patterns in protease inhibitors.
+
+
 ##  First Data Retrieval 
 Download PDB entries matching the following criteria:
 - Resolution ≤ 3.5 Å
