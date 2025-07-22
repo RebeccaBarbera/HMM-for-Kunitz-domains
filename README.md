@@ -105,10 +105,13 @@ Download these two FASTA files from Uniprot
 - tail -n 286416 negatives_random.txt > `neg_2.txt`
 
 ## Extract Sequences by ID:
+#### downoad the `get_seq.py` file from attached to this repository and run the following commands
 - python3 get_seq.py pos_1.txt all_swiss.fasta > `pos_1.fasta`
 - python3 get_seq.py pos_2.txt all_swiss.fasta > `pos_2.fasta`
 - python3 get_seq.py neg_1.txt all_swiss.fasta > `neg_1.fasta`
 - python3 get_seq.py neg_2.txt all_swiss.fasta > `neg_2.fasta`
+##### please make sure to change the file names according to you own files 
+##### please make sure to have the file get_seq.py save din your working directory
 
 ## Run HMM search and Hit Mapping:
 - hmmsearch -Z 1000 --max --tblout `pos_1.out` pdb_kunitz_HP_clean.hmm pos_1.fasta
@@ -133,7 +136,7 @@ Download these two FASTA files from Uniprot
 - cat pos_2.class neg_2.class > `set_2.class`
 
 ## Evaluate model Performance 
-#### Run in your terminal:
+#### Download the file named `performance-2.py` and run the following commands in your terminal:
 
 - for i in $(seq 1 12); do
     python3 performance-2.py set_1.class 1e-$i
