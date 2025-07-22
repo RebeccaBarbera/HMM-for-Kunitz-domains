@@ -29,7 +29,7 @@ grep PF00014 | \
 awk '{print ">"$1"_"$3; print $2}' > `pdb_kunitz.fasta`
 
 ## Clustering with CD-HID
-cd-hit -i pdb_kunitz.fasta -o pdb_kunitz_cluster.txt
+- `cd-hit -i pdb_kunitz.fasta -o pdb_kunitz_cluster.txt`
 #### output files:
 - `pdb_kunitz_cluster.txt`
 - `pdb_kunitz_cluster.txt.clstr`
