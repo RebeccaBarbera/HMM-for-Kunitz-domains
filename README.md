@@ -29,7 +29,7 @@ grep PF00014 | \
 awk '{print ">"$1"_"$3; print $2}' > `pdb_kunitz.fasta`
 
 ## Clustering with CD-HID
-- `cd-hit -i pdb_kunitz.fasta -o pdb_kunitz_cluster.txt`
+- cd-hit -i pdb_kunitz.fasta -o pdb_kunitz_cluster.txt
 #### output files:
 - `pdb_kunitz_cluster.txt`
 - `pdb_kunitz_cluster.txt.clstr`
@@ -55,7 +55,6 @@ output: `pdb_kunitz_HP_clean.hmm`
 
 ## Second Data retrieval:
 Open Uniprot and download the results from the following queries:
-with the following queries:
 
 •	`Human: (taxonomy_id:9606) AND (reviewed:true) AND (xref:pfam-PF00014)`
 
